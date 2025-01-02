@@ -1,0 +1,243 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fullscreen white background with subtle patterns */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff; /* Pure white background */
+  font-family: 'Poppins', sans-serif; /* Modern and clean font */
+  position: relative;
+  overflow: hidden;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+/* Decorative floating circles for a modern touch */
+.signup-container::before,
+.signup-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.1); /* Light purple circles */
+  animation: float 20s linear infinite;
+}
+
+.signup-container::before {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.signup-container::after {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+  background: rgba(66, 153, 225, 0.1); /* Light blue circles */
+  animation-delay: -10s;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+/* Glass-effect form container */
+.signup-form {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass blur */
+  backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 16px; /* Rounded corners for smooth design */
+  padding: 40px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elevate form on hover */
+.signup-form:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Form header with refined typography */
+.signup-header {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #2d3748; /* Dark gray text */
+  position: relative;
+}
+
+/* Underline effect for the header */
+.signup-header::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce, #4299e1); /* Gradient underline */
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e53e3e; /* Bright red for errors */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(229, 62, 62, 0.1); /* Light red background for error */
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(229, 62, 62, 0.3); /* Light red border */
+}
+
+/* Labels for input fields */
+.signup-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568; /* Medium gray */
+  margin-bottom: 8px;
+}
+
+/* Input fields with icons */
+.signup-input-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.signup-input-container input {
+  width: 100%;
+  padding: 14px 40px 14px 14px; /* Space for the icon */
+  border: 1px solid rgba(211, 211, 211, 0.8); /* Light border */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2d3748; /* Dark gray text */
+  background-color: #fff; /* White background for inputs */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-input-container input::placeholder {
+  color: rgba(72, 72, 72, 0.6); /* Light gray placeholder text */
+}
+
+.signup-input-container .icon {
+  position: absolute;
+  right: 14px;
+  top: 70%;
+  transform: translateY(-50%);
+  color: #3182ce; /* Blue icon color */
+  font-size: 1.1rem;
+}
+
+/* Focus state for input fields */
+.signup-input-container input:focus {
+  outline: none;
+  border-color: #3182ce; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(49, 130, 206, 0.5); /* Blue glow */
+  background-color: #f9f9f9; /* Slightly lighter background */
+}
+
+/* Signup button with refined styling */
+.signup-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff; /* White button text */
+  background: linear-gradient(90deg, #3182ce, #4299e1); /* Gradient blue button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+}
+
+.signup-button:hover {
+  background: linear-gradient(90deg, #4299e1, #3182ce); /* Reverse gradient on hover */
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(49, 130, 206, 0.4); /* Glow on hover */
+}
+
+.signup-button:disabled {
+  background-color: #e2e8f0; /* Gray background for disabled button */
+  color: #a0aec0; /* Lighter gray text */
+  cursor: not-allowed;
+}
+
+/* Link to login */
+.login-link-container {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.login-text {
+  color: #4a5568; /* Medium gray */
+  font-size: 0.9rem;
+}
+
+.login-link {
+  color: #3182ce; /* Blue link */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.login-link:hover {
+  color: #2b6cb0; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom */
+  text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .signup-form {
+    padding: 20px; /* Reduced padding for smaller screens */
+    border-radius: 12px;
+  }
+
+  .signup-header {
+    font-size: 1.8rem;
+  }
+
+  .signup-input-container input {
+    padding: 12px 35px 12px 12px; /* Adjust padding for smaller screens */
+    font-size: 0.9rem;
+  }
+
+  .signup-button {
+    font-size: 0.95rem; /* Slightly smaller button text */
+    padding: 12px;
+  }
+
+  .signup-input-container .icon {
+    font-size: 1rem;
+    right: 10px; /* Adjust icon position */
+  }
+}

@@ -1,0 +1,301 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Order List Container */
+.order-list {
+  background: rgba(255, 255, 255, 0.25); /* Semi-transparent white for glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass blur */
+  backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 16px; /* Rounded corners for smooth design */
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+  margin-bottom: 40px; /* Space below the order list */
+}
+
+.order-list:hover {
+  transform: translateY(5px); /* Slight hover lift */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Order List Header */
+.order-list-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2d3748; /* Dark gray text */
+  margin-bottom: 24px; /* Space below header */
+  position: relative;
+}
+
+/* Underline effect for the header */
+.order-list-header::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce, #4299e1); /* Gradient underline */
+  display: block;
+  margin: 10px auto 0; /* Center the underline */
+  border-radius: 2px;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e53e3e; /* Bright error red */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(229, 62, 62, 0.1); /* Light red background for error */
+  padding: 12px;
+  margin-bottom: 16px; /* Space below error message */
+  border-radius: 8px;
+  border: 1px solid rgba(229, 62, 62, 0.3); /* Light red border */
+}
+
+/* Success message styling */
+.success-message {
+  color: #38a169; /* Green for success */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(56, 161, 105, 0.1); /* Light green background */
+  padding: 12px;
+  margin-bottom: 16px; /* Space below success message */
+  border-radius: 8px;
+  border: 1px solid rgba(56, 161, 105, 0.3); /* Light green border */
+}
+
+/* No Orders Message */
+.no-orders {
+  text-align: center;
+  color: #4a5568; /* Medium gray */
+  font-size: 1rem;
+  padding: 20px;
+}
+
+/* Orders List */
+.orders {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Individual Order Item */
+.order-item {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Space between orders */
+  color: #2d3748; /* Dark gray text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.order-item:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+}
+
+/* Order Details */
+.order-details p {
+  margin-bottom: 8px; /* Space between details */
+  font-size: 1rem;
+}
+
+/* Order Actions */
+.order-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Amend Section */
+/* Amend Section */
+.amend-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space below amend section */
+  width: 100%; /* Ensure full width for proper layout in smaller screens */
+}
+
+/* Amend Input */
+.amend-input {
+  flex: 1; /* Allow input to grow and take up available space */
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #2d3748;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 8px; /* Space between input and button */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.amend-input::placeholder {
+  color: rgba(72, 72, 72, 0.6);
+}
+
+.amend-input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 6px rgba(49, 130, 206, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Amend Button */
+.amend-button {
+  flex-shrink: 0; /* Prevent the button from shrinking */
+  background: linear-gradient(90deg, #3182ce, #4299e1);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.amend-button:hover {
+  background: linear-gradient(90deg, #4299e1, #3182ce);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.4);
+}
+
+.amend-button:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .order-list {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .order-list-header {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-actions {
+    width: 100%;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  .amend-section {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for better layout in small screens */
+  }
+
+  .amend-input {
+    flex: 1;
+    margin-bottom: 8px; /* Add space below input for smaller screens */
+  }
+
+  .amend-button,
+  .cancel-button {
+    flex: 1; /* Make buttons stretch to full width */
+    justify-content: center;
+    margin-bottom: 8px; /* Add space between buttons */
+  }
+}
+
+/* Cancel Button */
+.cancel-button {
+  background: #e53e3e; /* Red background */
+  color: #ffffff; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 6px; /* Rounded corners */
+  padding: 8px 12px; /* Padding inside the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.cancel-button:hover {
+  background: #c53030; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.4); /* Glow on hover */
+}
+
+.cancel-button:active {
+  transform: scale(0.98); /* Subtle shrink on click */
+}
+
+/* Canceled Message */
+.canceled-message {
+  color: #e53e3e; /* Bright red */
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .order-list {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .order-list-header {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-actions {
+    width: 100%;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  .amend-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .amend-button,
+  .cancel-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

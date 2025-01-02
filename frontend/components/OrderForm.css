@@ -1,0 +1,147 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Glassmorphic form container */
+.order-form {
+  background: rgba(255, 255, 255, 0.25); /* Semi-transparent white for glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass blur */
+  backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 16px; /* Rounded corners for smooth design */
+  padding: 40px 30px; /* Adequate padding */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+/* Elevate form on hover */
+.order-form:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Form header with refined typography */
+.order-form h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2d3748; /* Dark gray text */
+  margin-bottom: 24px; /* Space below header */
+  position: relative;
+}
+
+/* Underline effect for the header */
+.order-form h3::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce, #4299e1); /* Gradient underline */
+  display: block;
+  margin: 10px auto 0; /* Center the underline */
+  border-radius: 2px;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e53e3e; /* Bright red for errors */
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(229, 62, 62, 0.1); /* Light red background for error */
+  padding: 12px;
+  margin-bottom: 16px; /* Space below error message */
+  border-radius: 8px;
+  border: 1px solid rgba(229, 62, 62, 0.3); /* Light red border */
+}
+
+/* Input field styling */
+.order-form input {
+  width: 100%;
+  padding: 14px 16px; /* Padding inside the input */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Semi-transparent border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem;
+  color: #2d3748; /* Dark gray text */
+  background-color: rgba(255, 255, 255, 0.2); /* Light glass-like background */
+  margin-bottom: 20px; /* Space below input */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+/* Placeholder text styling */
+.order-form input::placeholder {
+  color: rgba(72, 72, 72, 0.6); /* Light gray placeholder text */
+}
+
+/* Focus state for input fields */
+.order-form input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #3182ce; /* Blue border on focus */
+  box-shadow: 0 0 8px rgba(49, 130, 206, 0.5); /* Blue glow */
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly lighter background */
+}
+
+/* Signup button styling */
+.order-form button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase; /* Button text in uppercase for emphasis */
+  color: #ffffff; /* White button text */
+  background: linear-gradient(90deg, #3182ce, #4299e1); /* Gradient blue button */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+  font-family: 'Poppins', sans-serif; /* Consistent font */
+}
+
+/* Hover state for the button */
+.order-form button:hover {
+  background: linear-gradient(90deg, #4299e1, #3182ce); /* Reverse gradient on hover */
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(49, 130, 206, 0.4); /* Glow on hover */
+}
+
+/* Disabled state for the button */
+.order-form button:disabled {
+  background-color: #e2e8f0; /* Gray background for disabled button */
+  color: #a0aec0; /* Lighter gray text */
+  cursor: not-allowed; /* Not-allowed cursor */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .order-form {
+    padding: 30px 20px; /* Reduced padding for smaller screens */
+    border-radius: 12px; /* Smaller border radius */
+  }
+
+  .order-form h3 {
+    font-size: 1.6rem; /* Smaller header font size */
+    margin-bottom: 20px; /* Adjusted margin */
+  }
+
+  .order-form input {
+    padding: 12px 14px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller font size */
+    margin-bottom: 16px; /* Adjusted margin */
+  }
+
+  .order-form button {
+    font-size: 0.9rem; /* Smaller font size */
+    padding: 12px; /* Reduced padding */
+  }
+}
